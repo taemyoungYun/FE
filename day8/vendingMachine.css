@@ -1,0 +1,107 @@
+body {
+	width: 100%;
+	height: 100%;
+}
+
+#productPannel {
+	width: 400px;
+	height: 240px;
+	padding: 20px 20px 20px 20px;
+	background-color: #adff2f;
+}
+
+#productPannel .product {
+	float: left;
+	width: 80px;
+	height: 100px;
+	margin: 10px 10px 10px 10px;
+	text-align: center;
+	font-size: 20px;
+	color: black;
+}
+
+#productPannel .product .divImg {
+	background-color: #228b22;
+	height: 20px;
+	padding: 30px 0px 30px 0px
+}
+
+
+
+#productPannel .product .divTxt {
+	height: 20px;
+}
+
+#payingPannel {
+	margin: 5px 0px 5px 0px;
+	width: 420px;
+	height: 250px;
+	padding: 10px 10px 10px 10px;
+	background-color: #ffd700;
+	color: black;
+	text-align: center;
+}
+
+#insertBox {
+	float: left;
+	width: 150px;
+	height: 20px;
+	margin: 60px 0px 20px 0px;
+	padding: 25px 0px 25px 0px;
+	background-color: #cd5c5c;
+	background-color: #cd5c5c;
+}
+
+#refundBox {
+	float: left;
+	width: 150px;
+	height: 20px;
+	margin: 50px 15px 0px 0px;
+	padding: 10px 0px 10px 0px;
+	background-color: #228b22;
+}
+
+#moneyPocketBox {
+	float: right;
+	width: 160px;
+	height: 250px;
+	background-color: #cd5c5c;
+	font-size: 15px;
+}
+
+.money {
+	width: 120px;
+	height: 30px;
+	margin: 10px 20px 10px 20px;
+}
+
+.moneyCoins {
+	position: absolute; 
+	float : left;
+	width: 30px;
+	height: 30px;
+	background-color: white;
+}
+
+.moneyTexts {
+	float: right;
+	width: 70px;
+	height: 20px;
+	text-align: left;
+	padding-top: 10px;
+}
+
+#pocketMoney {
+	float: left;
+	margin: 15px 10px 20px 10px
+}
+
+#consolePannel {
+	width: 400px;
+	height: 100px;
+	margin-top: 5px;
+	padding: 10px 20px 10px 20px;
+	background-color: aqua;
+	padding: 10px 20px 10px 20px;
+	overflow: auto;
+}
