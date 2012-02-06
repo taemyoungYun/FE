@@ -4,7 +4,13 @@ var VendingMachine = $Class({
 
 	$init : function(nCurrentoMoney){
 		this.oMoney.current = nCurrentoMoney;
-
+		this.oCoinBox = {
+				x : $Element("moneyPocketBox").offset().left,
+				y : $Element("moneyPocketBox").offset().top,
+				width : $Element("moneyPocketBox").width(),
+				height : $Element("moneyPocketBox").height(),
+		};
+		
 		function Item(name,price){
 			this.name = name;
 			this.price = price;
@@ -64,6 +70,12 @@ var VendingMachine = $Class({
 
 	insertCoin : function(oEvent,isSucess){
 		this.oMoney.selected = parseInt($Element(oEvent.element).attr("id"));
+		
+		var pos = oEvent.pos();
+		if(pos.pageX > this.oCoinBox.x && pos.pageY > this.oCoinBox.y &&
+				pos.pageX < this.oCoinBox.x + this.oCoinBox.width &&
+				pos.pageY < this.oCoinBox.y + this.oCoinBox.height) 
+			return;
 		
 		if(this.oMoney.inserted == 0) this.isPaperInserted = false;
 		
