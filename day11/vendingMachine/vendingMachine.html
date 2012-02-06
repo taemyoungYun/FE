@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="vendingMachine.css"/>
+<script type="text/javascript" src="../jindo.all.js"></script>
+<script type="text/javascript" src="dragAndDrop.js"></script>
+<script type="text/javascript" src="vendingMachine.js"></script>
+<title>자판기</title>
+</head>
+<body onload="new VendingMachine(10000);">
+	<div id="productPannel"></div>
+	<div id="payingPannel">
+		<div id="insertBox">0원</div>
+		<div id="moneyPocketBox">
+			<div class="money" id='50won'>
+				<div class="moneyCoins" id="50wonImg"></div>
+				<div class="moneyTexts" id="50wonTxt">50원</div>
+			</div>
+			<div class="money" id='100won'>
+				<div class="moneyCoins" id="100wonImg"></div>
+				<div class="moneyTexts" id="100wonTxt">100원</div>
+			</div>
+			<div class="money" id='500won'>
+				<div class="moneyCoins" id="500wonImg"></div>
+				<div class="moneyTexts" id="500wonTxt">500원</div>
+			</div>
+			<div class="money" id='1,000won'>
+				<div class="moneyCoins" id="1000wonImg"></div>
+				<div class="moneyTexts" id="1000wonTxt">1000원</div>
+			</div>
+			<div id="pocketMoney">내가 가진 돈 : 10000</div>
+		</div>
+		<div id="refundBox">반환버튼</div>
+	</div>
+	<div id="consolePannel"></div>
+</body>
+</html>
