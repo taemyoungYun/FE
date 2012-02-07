@@ -35,6 +35,17 @@
 			nDownLimit         : 10
 		});
 		
+		
+		spinBox.attach("mousedown",function(oCustomEvent){
+			this._originalInterval = spinBox.option("nInterval");
+		});
+		spinBox.attach("valuechange",function(oCustomEvent){
+			spinBox.option("nInterval",spinBox.option("nInterval") - 0.001);
+		});
+		spinBox.attach("mouseup",function(oCustomEvent){
+			spinBox.option("nInterval",this._originalInterval);
+		});
+		
 		spinBox2.attach("valuechange", function(oCustomEvent){
 			if(oCustomEvent.elFrom == oCustomEvent.elUp){
 				spinBox2.changeClass("black",null,null);
