@@ -8,8 +8,11 @@
 <script type="text/javascript" src="simpleSpinBox.js"></script>
 <script type="text/javascript" src="mySpinBox.js"></script>
 <style type="text/css">
- .input {
+ .red {
  	color : red;
+ }
+ .black {
+ 	color: black;
  }
 </style>
 </head>
@@ -32,10 +35,18 @@
 			nDownLimit         : 10
 		});
 		
-		spinBox.option("nInterval","0.05")
+		spinBox2.attach("valuechange", function(oCustomEvent){
+			if(oCustomEvent.elFrom == oCustomEvent.elUp){
+				spinBox2.changeClass("black",null,null);
+			}else{
+				spinBox2.changeClass("red",null,null);
+			}
+		});
+		
+		spinBox.option("nInterval","0.05");
 		spinBox2.option("sUpButtonText" , "+");
 		spinBox2.option("sDownButtonText" , "-");
-		spinBox2.changeClass("input",null,null);
+		
 	</script>
 </body>
 </html>
