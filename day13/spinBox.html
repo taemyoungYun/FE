@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jindo.all.js"></script>
+<script type="text/javascript" src="jindo.Component.js"></script>
+<script type="text/javascript" src="simpleSpinBox.js"></script>
+<script type="text/javascript" src="mySpinBox.js"></script>
+<style type="text/css">
+ .input {
+ 	color : red;
+ }
+</style>
+</head>
+<body>
+	<div id="targetDiv"></div>
+	<div id="targetDiv2"></div>
+	
+	<script type="text/javascript">
+		var spinBox = new nhn.MySpinBox("targetDiv",{
+			nDefaultValue      : 200,
+			nUpLimit 	       : 300,
+			nDownLimit         : 100
+		});
+		
+		var spinBox2 = new nhn.MySpinBox("targetDiv2",{
+			nDefaultValue      : 500,
+			nIncrementUnit     : 5,
+			nDecrementUnit     : 5,
+			nUpLimit 	       : 1000,
+			nDownLimit         : 10
+		});
+		
+		spinBox.option("nInterval","0.05")
+		spinBox2.option("sUpButtonText" , "+");
+		spinBox2.option("sDownButtonText" , "-");
+		spinBox2.changeClass("input",null,null);
+	</script>
+</body>
+</html>
