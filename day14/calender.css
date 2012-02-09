@@ -1,0 +1,60 @@
+@CHARSET "UTF-8";
+
+
+
+.calender-title{
+	text-align :center;
+	font-family:verdana;
+	font-size:12px;
+	color:#383838;
+}
+
+.calender-btn-prev{
+	cursor: pointer;
+	font:11px dotum;
+	text-align :center;
+	white-space:nowrap;
+	letter-spacing:-1px;
+	margin-right: 20px;
+}
+
+.calender-btn-next{
+	cursor: pointer;
+	font:11px dotum;
+	text-align :center;
+	white-space:nowrap;
+	letter-spacing:-1px;
+	margin-left : 20px
+}
+
+.calender-week{
+	text-align:center;
+	color:#000000;
+}
+
+.calender-date {
+	cursor: pointer;
+}
+
+.calender-today{
+	background:#6595db;
+	color:#ffffff
+}
+
+.calender-prev-month-date{
+	opacity: 0.2; 
+	filter: alpha(opacity=20);
+}
+
+.calender-next-month-date{
+	opacity: 0.2; 
+	filter: alpha(opacity=20);
+}
+
+.calender-sat{
+	color : blue;
+}
+
+.calender-sun{
+	color : red;
+}
