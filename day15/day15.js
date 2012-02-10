@@ -39,6 +39,7 @@ var day15 = $Class({
 			"dragStart" : function(e){
 				var elClone = $Element(e.elHandle.cloneNode(true));
 				$Element(document.body).append(elClone);
+				elClone.attr("id","clone");
 				e.elDrag = elClone.$value();
 				oTransition.abort();
 			}
@@ -68,7 +69,7 @@ var day15 = $Class({
 					elTransition = e.elDrag;
 					oTransition.start(1000,e.elDrag,{
 						"@top"  : $Element(e.elHandle).offset().top + "px",
-						"@left" : $Element(e.elHandle).offset().left + "px"
+						"@left" : $Element(e.elHandle).offset().left + "px",
 					});
 				}
 			}
@@ -80,6 +81,12 @@ var day15 = $Class({
 			},
 			"end" : function(){
 				$Element(elTransition).leave();
+			},
+			"playing" : function(e){
+				var wel = $Element(e.element);
+				if(wel.css("backgroundColor") != "rgb(255, 192, 203)") 
+					wel.css("backgroundColor","pink");
+				wel = null;
 			}
 		});
 
