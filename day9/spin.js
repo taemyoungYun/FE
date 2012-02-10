@@ -1,3 +1,16 @@
+function getById(id) {
+	return document.getElementById(id);
+}
+
+function addEventHandler(target, sEvent, fHandler) {
+	if(target.addEventListener){
+		target.addEventListener(sEvent, fHandler, false);
+	}else if(target.attachEvent){
+		sEvent = "on" + sEvent;
+		target.attachEvent(sEvent, fHandler);
+	}
+}
+
 var spin = function(elSpinBox, elControl) {
 	var context;
 	var oOption = {};
