@@ -67,7 +67,7 @@ nhn.SimpleCalender = $Class({
 		if(this.option("oDate").isLeapYear())
 			arrDaysInMonth[1] = 29;
 		oDate.date(1);
-		/*한달이 몇주인지 구한*/
+		/*�쒕떖��紐뉗＜�몄� 援ы븳*/
 		var nTmp = (oDate.day() + arrDaysInMonth[nThisMonth]) / 7;
 		var nWeeks = (nTmp != Math.floor(nTmp)) ? Math.floor(nTmp) + 1 : Math.floor(nTmp);
 		this._elWeeks = $A();
@@ -100,7 +100,7 @@ nhn.SimpleCalender = $Class({
 			if(oDate.day() == 6)
 				el.addClass("calender-sat");
 
-			el.attr("date", oDate.year() + "�� " + parseInt(oDate.month() + 1) + "�� " + oDate.date() + "��");
+			el.attr("date", oDate.year() + "년" + parseInt(oDate.month() + 1) + "월 " + oDate.date() + "일");
 			el.text(oDate.date());
 
 			oDate.date(oDate.date() + 1);
